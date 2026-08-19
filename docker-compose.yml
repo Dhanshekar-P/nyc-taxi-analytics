@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: nyc-taxi-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: nyc_taxi
+      POSTGRES_USER: analyst
+      POSTGRES_PASSWORD: analyst_password
+    ports:
+      - "5433:5432"
+    volumes:
+      - nyc_taxi_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  nyc_taxi_postgres_data:

@@ -1,0 +1,18 @@
+# --- Data handling ---
+pandas==2.2.3
+pyarrow==17.0.0        # required to read NYC TLC's parquet trip files
+# polars==1.9.0         # uncomment only if pandas becomes a performance bottleneck
+
+# --- Database ---
+sqlalchemy==2.0.35
+psycopg2-binary==2.9.9
+
+# --- Config / env ---
+python-dotenv==1.0.1
+
+# --- Ingestion ---
+requests==2.32.3       # for downloading raw trip files from NYC TLC
+
+# --- Dev / notebooks / testing ---
+jupyter==1.1.1
+pytest==8.3.3
